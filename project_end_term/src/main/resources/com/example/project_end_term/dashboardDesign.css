@@ -1,0 +1,62 @@
+.top-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .2px .4px;
+}
+
+.semi-top-form{
+    -fx-background-color:#efefef;
+    -fx-border-color:#000;
+    -fx-border-width:.2px .4px .4px .4px;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#fb3d63;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color:#ddd;
+}
+
+.nav-form{
+    -fx-background-color:linear-gradient(to bottom right, #2d658c, #2ca772);
+}
+
+.nav-btn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill: #d8d8d8;
+    -fx-font-size:15px;
+    -fx-font-family:"Arial";
+    -fx-alignment:CENTER-LEFT;
+}
+
+.nav-btn:hover{
+    -fx-text-fill: #ffffff;
+}
+
+.logout{
+    -fx-cursor:hand;
+    -fx-text-fill: #d8d8d8;
+}
+
+.logout:hover{
+    -fx-text-fill: #ffffff;
+}
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 6,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+}
