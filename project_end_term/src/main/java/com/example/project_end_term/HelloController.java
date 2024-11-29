@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,6 +33,9 @@ public class HelloController {
     private Connection connect;
     private PreparedStatement prepared;
     private ResultSet result;
+
+    private double x = 0;
+    private double y = 0;
 
     public void loginAdmin(){
         String sql = "SELECT * FROM admin WHERE username = ? and password = ?";
@@ -66,6 +70,24 @@ public class HelloController {
 
                     Stage stage = new Stage();
                     Scene scene = new Scene(root);
+
+                    root.setOnMousePressed(event -> {
+                        x = event.getSceneX();
+                        y = event.getSceneY();
+                    });
+
+                    root.setOnMouseDragged(event -> {
+                        stage.setX(event.getScreenX() - x);
+                        stage.setY(event.getScreenY() - y);
+                        stage.setOpacity(0.8f);
+                    });
+
+                    root.setOnMouseReleased(event -> {
+                        stage.setOpacity(1.0f);
+                    });
+
+                    stage.initStyle(StageStyle.TRANSPARENT);
+
                     stage.setScene(scene);
                     stage.show();
                 }

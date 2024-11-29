@@ -1,6 +1,7 @@
 module com.example.project_end_term {
     requires javafx.controls;
     requires javafx.fxml;
+    requires transitive javafx.base;
 
     requires com.dlsc.formsfx;
     requires java.desktop;
